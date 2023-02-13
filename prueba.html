@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://ia601505.us.archive.org/33/items/TonyX/plyr.css"/>
+
+  <!--estilos css cargados enla nube
+  <link rel="stylesheet" href="https://ia904703.us.archive.org/22/items/estilos_series/estilos_series.css">-->
+ 
+  
+    
+    <title>reproductort series</title>
+
+    <style>
+
+        
+
+    </style>
+</head>
+<body>
+    <h3 class="heading"> TEMPORADA 2</h3>
+    <details>
+      <summary>MAS TEMPORADAS</summary>
+      <br>
+<li><h4><a href="go:chukt1">TEMPORADA 1</a></h4></li>
+<li><h4><a href="go:chukt2">TEMPORADA 2</a></h4></li>
+<!--<li><h4><a href="go:chukt3">TEMPORADA 3</a></h4></li>
+<li><h4><a href="go:chukt4">TEMPORADA 4</a></h4></li>-->
+
+    </details>
+
+    <br>
+    <div class="container">
+
+        <div class="main-video">
+            <div class="video">
+                <video class="plyr" src="https://ia601606.us.archive.org/26/items/chuckt2c1/chuckt2c1.mp4" controlsList="nodownload" muted >
+                </video>   
+                <h3 class="title">CHUCKY CAP1</h3>
+                
+            </div>
+        </div>
+
+
+        <div class="video-list">
+            <div class="vid active">
+            <video  src="https://ia601606.us.archive.org/26/items/chuckt2c1/chuckt2c1.mp4"  controlsList="nodownload" poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg" ></video>   
+                <h3>CHUCKY CAP1</h3>
+            </div>
+
+            <div class="vid">
+                <video  src="https://ia804709.us.archive.org/28/items/chuckt2c2origin_1676170585609/chuckt2c2origin_1676170585609.mp4" muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                    <h3>CHUCKY CAP2</h3>
+                </div>
+
+                <div class="vid">
+                    <video  src="https://ia601608.us.archive.org/9/items/chuckt2c3/chuckt2c3.mp4" controlsList="nodownload"   muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                        <h3>CHUCKY CAP3</h3>
+                    </div>
+
+                    <div class="vid">
+                        <video  src="https://ia904707.us.archive.org/13/items/chuckt2c4/chuckt2c4.mp4" controlsList="nodownload"    muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                            <h3>CHUCKY CAP4</h3>
+                        </div>
+
+                        <div class="vid">
+                            <video src="https://ia904703.us.archive.org/25/items/chuckt2c5/chuckt2c5.mp4"  muted controlsList="nodownload"   poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                                <h3>CHUCKY CAP5</h3>
+                            </div>
+
+                           <div class="vid">
+                                <video src="https://ia601607.us.archive.org/35/items/chuckt2c6/chuckt2c6.mp4"  muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                                    <h3>CHUCKY CAP6</h3>
+                                </div>
+
+                               <div class="vid">
+                                    <video src="https://ia904701.us.archive.org/24/items/chuckt2c7/chuckt2c7.mp4"   muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                                        <h3>CHUCKY CAP7</h3>
+                                    </div>
+
+                                    <div class="vid">
+                                      <video src="https://ia601601.us.archive.org/1/items/chuckt2c8/chuckt2c8.mp4"  muted poster="https://i.postimg.cc/W3MD7LLZ/chucky_serie.jpg"></video>   
+                                          <h3>CHUCKY CAP8</h3>
+                                      </div><!---->
+
+
+        </div>  
+
+        <br>
+        <div class="description">
+          <h4>La segunda temporada comienza tras los sucesos ocurridos al final de la primera entrega. Jake, Devon y Lexy no han conseguido librarse de Chucky, y pese a haber sido enviados a un internado católico, sienten que el muñeco diabólico aún les sigue la pista. Por su parte, Andy, el dueño original de Chucky, debe buscar la forma de huir de las garras de Tiffany, la muñeca amante de Chucky.</h4>
+          <br>
+        </div>          
+               <!--<button><a href="go:home"></a> HOME</button>-->
+
+        
+
+
+    
+</body>
+
+<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+<script>
+const controls = [
+'rewind',
+'play',
+'fast-forward',
+'progress',
+'current-time',
+'duration',
+'mute',
+'volume',
+'captions',
+'settings',
+'pip',
+'airplay',
+'fullscreen',
+'restart',
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+const player = Plyr.setup('.plyr', { controls });
+});
+/*//<![CDATA[
+const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+//]]>*/
+
+
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelector('.main-video .title')
+
+listVideo.forEach(video => {
+ video.onclick = () => {
+     listVideo.forEach(vid => vid.classList.remove('active'));
+     video.classList.add('active');
+     let src = video.children[0].getAttribute('src');
+     mainVideo.src = src;
+     let text = video.children[1].innerHTML;
+     title.innerHTML = text;
+ };
+});
+
+
+
+
+</script>
+</html>
